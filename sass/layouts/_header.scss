@@ -1,0 +1,53 @@
+.header {
+    width: 100%;
+    background-color:$color-secondary;
+    display : grid;
+    grid-template-rows: 8rem 1fr 20vh;
+    color: white;
+
+    &__list {
+        padding: 2rem;
+        justify-self: end;
+        display: grid;
+        list-style: none;
+        grid-template-columns: repeat(2, max-content);
+        grid-column-gap: 2rem;
+    }
+    &__link {
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+    }
+    &__content {
+        align-self: center;
+        justify-self: center;
+
+        display: grid;
+        grid-template-columns: minmax(max-content, 50vw);
+        grid-gap: 2rem;
+        padding: 5rem;
+        h2{
+            justify-self: start;
+            padding-left: 2rem;
+            padding-right: 2rem; 
+        }
+        h3{justify-self: center;}
+        h4{justify-self: end;}
+    }
+    &__btn {
+        justify-self: center;
+        align-self: start;
+
+        font-family: $font-primary;
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        background-color: transparent;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+
+        cursor: pointer;
+
+        padding: 1rem 5rem;
+    }
+}

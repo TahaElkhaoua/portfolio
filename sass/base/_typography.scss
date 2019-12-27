@@ -1,0 +1,32 @@
+@include google('Open+Sans');
+
+.heading-2 {
+    line-height: 1;
+    font-family: $font-primary;
+    font-size: 12rem;
+
+    &--bold{
+        font-weight: 700;
+    }
+}
+.heading-3 {
+    line-height: 1;
+
+    font-family: $font-primary;
+    font-size: 8.8rem;
+
+    &--light{
+        font-weight: 300;
+    }
+}
+.heading-4 {
+    line-height: 1;
+
+    font-family: $font-primary;
+    font-size: 3rem;
+
+    &--light{
+        font-weight: 300;
+    }
+}
+.primary-color {color: $color-primary !important;}

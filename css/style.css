@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+.heading-2 {
+  line-height: 1;
+  font-family: "Open Sans";
+  font-size: 12rem; }
+  .heading-2--bold {
+    font-weight: 700; }
+
+.heading-3 {
+  line-height: 1;
+  font-family: "Open Sans";
+  font-size: 8.8rem; }
+  .heading-3--light {
+    font-weight: 300; }
+
+.heading-4 {
+  line-height: 1;
+  font-family: "Open Sans";
+  font-size: 3rem; }
+  .heading-4--light {
+    font-weight: 300; }
+
+.primary-color {
+  color: #9ee493 !important; }
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans";
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: 100vh;
+  overflow: hidden; }
+
+.cloudes__cloud {
+  position: absolute;
+  height: 13rem; }
+  .cloudes__cloud--1 {
+    top: 55%;
+    left: 0;
+    transform: translateX(-30%); }
+  .cloudes__cloud--2 {
+    transform: scale(0.5);
+    top: 25%;
+    left: 10%; }
+  .cloudes__cloud--3 {
+    transform: scale(1.1);
+    right: 0%;
+    top: 45%;
+    transform: translateX(20%); }
+
+.header {
+  width: 100%;
+  background-color: #131d24;
+  display: grid;
+  grid-template-rows: 8rem 1fr 20vh;
+  color: white; }
+  .header__list {
+    padding: 2rem;
+    justify-self: end;
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 2rem; }
+  .header__link {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none; }
+  .header__content {
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: minmax(max-content, 50vw);
+    grid-gap: 2rem;
+    padding: 5rem; }
+    .header__content h2 {
+      justify-self: start;
+      padding-left: 2rem;
+      padding-right: 2rem; }
+    .header__content h3 {
+      justify-self: center; }
+    .header__content h4 {
+      justify-self: end; }
+  .header__btn {
+    justify-self: center;
+    align-self: start;
+    font-family: "Open Sans";
+    font-size: 2.5rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #9ee493;
+    border: 1px solid #9ee493;
+    cursor: pointer;
+    padding: 1rem 5rem; }
