@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    font-family: $font-primary;
 }
 
 html {
@@ -10,13 +11,16 @@ html {
 }
 body {
     font-family: $font-primary;
-    height: 100vh;
-    width: 100%;
     position: relative;
 
     //Setup Layout
     display: grid;
-    grid-template-rows: 100vh;
+    grid-template-rows: min-content min-content;
+    grid-column: minmax(max-content, 1fr);
 
-    overflow: hidden;
+    grid-row-gap: 10rem;
+    background-color: $color-secondary;
+}
+button, button:hover, button:active {
+    outline: none;
 }

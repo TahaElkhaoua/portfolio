@@ -1,0 +1,47 @@
+.btn {
+    z-index: 1;
+    overflow: hidden;
+    &__animator-background {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    &__animator-background::before {
+        position: absolute;
+        content : '';
+        display: block;
+        width: 100%;
+        height: 500%;
+        left: -110%;
+        top: -110%;
+        background: rgba($color-primary, 1);
+        transform: rotate(-40deg);
+        transition: all .5s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: -1;
+    }
+    &:hover &__animator-background::before {
+        left: 1.1rem;
+        top: -8rem;
+      }
+
+      &__animator-border::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 1%;
+        bottom: -1rem;
+        left: 0;
+        background-color: currentColor;
+        transition:all .5s cubic-bezier(0.23, 1, 0.32, 1);
+        transform: scaleX(0);
+        opacity: 0;
+      }
+      &__animator-border:hover::after, &__animator-border:active::after {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+}

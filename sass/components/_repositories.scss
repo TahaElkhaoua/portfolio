@@ -1,0 +1,76 @@
+.repositories {
+    display : grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+
+    padding: 2rem;
+
+    justify-content: center;
+    &__item {
+        width: 100%;
+        color: white;
+        border: 1px solid $color-primary;
+        padding: 3rem;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-rows: max-content 1fr max-content;
+    }
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        svg {
+            fill: currentColor;
+            height: 2.5rem;
+            width: 2.5rem;
+            margin-right: 2rem;
+        }
+        h3 {
+            display: block;
+            text-align: center;
+            align-self: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    }
+    &__description {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: left;
+        padding: .2rem;
+    }
+    &__links {
+        justify-self: end;
+        button {
+            justify-self: center;
+            align-self: start;
+    
+            font-family: $font-primary;
+            font-size: 1.3rem;
+            font-weight: 600;
+            position: relative;
+            background-color: transparent;
+            color: $color-primary;
+            border: 1px solid $color-primary;
+            cursor: pointer;
+            padding: 0.5rem 4rem;
+            
+            
+            transition:all .5s cubic-bezier(0.23, 1, 0.32, 1);
+              &:hover {
+                color: lighten($color-secondary, 10%);
+                box-shadow: 0 2rem 3rem rgba(0, 0, 0, .3);
+                transform: scale(1.01);
+              }
+              &:active {
+                  transform: scale(1.01) translateY(.1rem);
+                  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, .3);
+              }
+              .btn__animator-background {
+                  left: -20% !important;
+                  top: 50% !important;
+              }
+        }
+    }
+}

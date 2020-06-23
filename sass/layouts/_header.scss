@@ -4,6 +4,7 @@
     display : grid;
     grid-template-rows: 8rem 1fr 20vh;
     color: white;
+    min-height: 100vh;
 
     &__list {
         padding: 2rem;
@@ -12,11 +13,22 @@
         list-style: none;
         grid-template-columns: repeat(2, max-content);
         grid-column-gap: 2rem;
+        margin-right: 3rem;
     }
+    &__list-item {}
     &__link {
+        position: relative;
         font-size: 1.5rem;
-        color: white;
+        color: rgb(54, 9, 9);
         text-decoration: none;
+        letter-spacing: .2rem;
+        line-height: 1;
+        color: white;
+        text-align: center;
+        transition:all .5s cubic-bezier(0.23, 1, 0.32, 1);
+        &:hover {
+            //letter-spacing: .3rem;
+        }
     }
     &__content {
         align-self: center;
@@ -41,13 +53,23 @@
         font-family: $font-primary;
         font-size: 2.5rem;
         font-weight: 600;
-
+        position: relative;
         background-color: transparent;
         color: $color-primary;
         border: 1px solid $color-primary;
-
         cursor: pointer;
 
         padding: 1rem 5rem;
+
+        transition:all .5s cubic-bezier(0.23, 1, 0.32, 1);
+          &:hover {
+            color: lighten($color-secondary, 10%);
+            box-shadow: 0 2rem 3rem rgba(0, 0, 0, .3);
+            transform: scale(1.0);
+          }
+          &:active {
+              transform: scale(.99) translateY(.1rem);
+              box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, .3);
+          }
     }
 }

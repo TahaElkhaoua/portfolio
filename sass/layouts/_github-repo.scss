@@ -1,0 +1,12 @@
+.github-repo {
+    width: 100%;
+    max-width: 110rem;
+    justify-self: center;
+    &__heading {
+        text-align: center;
+        color: white;
+    }
+    &__repos {
+        margin-top: 5rem;
+    }
+}
