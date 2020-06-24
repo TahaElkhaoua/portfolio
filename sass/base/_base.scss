@@ -13,6 +13,9 @@ body {
     font-family: $font-primary;
     position: relative;
 
+
+    margin: auto;
+
     //Setup Layout
     display: grid;
     grid-template-rows: min-content min-content;
