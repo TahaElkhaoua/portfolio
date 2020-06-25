@@ -1,8 +1,10 @@
 .portfolio {
     width: 100%;
+    max-width: 150rem;
     justify-self: center;
     // background-color: red;
     &__heading {
+        margin-top: 1rem;
         text-align: center;
         color: white;
     }

@@ -10,15 +10,14 @@
 <body>
     <header class="header">
         <ul class="header__list">
-            <li class="header__list-item"><a href="#" class="header__link btn__animator-border">ABOUT</a></li>
-            <li class="header__list-item"><a href="#" class="header__link btn__animator-border">CONTACT</a></li>
+            <li class="header__list-item"><a href="#contact" class="header__link btn__animator-border">ABOUT ME</a></li>
         </ul>
        <div class="header__content">
         <h3 class="heading-3 heading-3--light">HEY THERE,</h3>
         <h2 class="heading-2 heading-2--bold">I'm <span class="primary-color">TAHA</span></h2>
         <h4 class="heading-4 heading-4--light primary-color">web developer & designer</h4>
        </div>
-       <button class="header__btn btn"><div class="btn__animator-background"></div>PORTFOLIO</button>
+       <button class="header__btn btn" onclick="scrollToElement('.portfolio')"><div class="btn__animator-background"></div>PORTFOLIO</button>
     </header>
     <section class="github-repo">
         <div class="github-repo__heading">
@@ -146,27 +145,80 @@
             </div>
         </div>
     </section>
+    
+    <section class="contact" id="contact">
+        
+        <div class="contact__content">
+            <div class="contact__about">
+                <h2 class="contact__heading">About me</h2>
+                <p>I'm a Web Developer and an engineering student. I am very passionate for front-end, back-end, animations and creative intuitive solutions for existing problems while providing dynamic user experiences.</p>
+                <p>To know more about what I can provide feel free to download my Resume provided with my full technical and academic skills :</p>
+                <div class="contact__info">
+                    
+                    <div class="contact__info__group">
+                        <svg>
+                            <use xlink:href="img/footer.svg#icon-briefcase"></use>
+                        </svg>
+                        <a href="#" class="contact__link">Resume</a>
+                    </div>
+                    <div class="contact__info__group">
+                        <svg>
+                            <use xlink:href="img/footer.svg#icon-mail"></use>
+                        </svg>
+                        <p>TahaElkhaoua.php@gmail.com</p>
+                    </div>
+                    <div class="contact__info__group">
+                        <svg>
+                            <use xlink:href="img/footer.svg#icon-old-mobile"></use>
+                        </svg>
+                        <p>+212 6 50 66 31 15</p>
+                    </div>
+                    <div class="contact__info__group">
+                        <svg>
+                            <use xlink:href="img/footer.svg#icon-location-pin"></use>
+                        </svg>
+                        <p>Kenitra, MOROCCO</p>
+                    </div>
+                </div>
+            </div>
 
-
-    <div class="u-float-free">
-        <div class="sm">
-            <div class="sm__icon" title="facebook">
-                <svg>
-                    <use xlink:href="img/sprite.svg#facebook"></use>
-                </svg>
-            </div>
-            <div class="sm__icon" title="github">
-                <svg>
-                    <use xlink:href="img/sprite.svg#github-image" title="github"/use>
-                </svg>
-            </div>
-            <div class="sm__icon" title="google plus">
-                <svg>
-                    <use xlink:href="img/sprite.svg#plus"title="google plus"></use>
-                </svg>
-            </div>
-            <div class="sm__seperator"></div>
+            <form autocomplete="off" action="#" class="contact__form">
+                <h2 class="contact__heading">Have a question or want to work together?</h2>
+                <div class="contact__group">
+                    <input type="text" name="name" class="contact__control" placeholder="Name">
+                </div>
+                <div class="contact__group">
+                    <input type="email" name="email" class="contact__control" placeholder="Email">
+                </div>
+                <div class="contact__group">
+                    <textarea name="message" id="" class="contact__control" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+                <input type="submit" class="contact__submit" value="send">
+            </form>
         </div>
-    </div>
+
+        <div class="u-float-free">
+            <div class="sm">
+                <div class="sm__icon" title="facebook">
+                    <svg onclick="openUrl('https://web.facebook.com/ElkhaouaTaha/')">
+                        <use xlink:href="img/sprite.svg#facebook"></use>
+                    </svg>
+                </div>
+                <div class="sm__icon" title="github">
+                    <svg onclick="openUrl('https://github.com/TahaElkhaoua')">
+                        <use xlink:href="img/sprite.svg#github-image" title="github"/use>
+                    </svg>
+                </div>
+                <div class="sm__icon" title="linkedIn">
+                    <svg onclick="openUrl('https://www.linkedin.com/in/taha-elkhaoua-049823141/')">
+                        <use xlink:href="img/footer.svg#icon-linkedin-with-circle"></use>
+                    </svg>
+                </div>
+                <div class="sm__seperator"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
