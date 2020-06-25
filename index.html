@@ -184,16 +184,18 @@
 
             <form autocomplete="off" action="#" class="contact__form">
                 <h2 class="contact__heading">Have a question or want to work together?</h2>
+               <div class="contact__container">
                 <div class="contact__group">
-                    <input type="text" name="name" class="contact__control" placeholder="Name">
+                    <input type="text" id="name" name="name" class="contact__control" placeholder="Name">
                 </div>
                 <div class="contact__group">
-                    <input type="email" name="email" class="contact__control" placeholder="Email">
+                    <input type="email" id="email" name="email" class="contact__control" placeholder="Email">
                 </div>
                 <div class="contact__group">
-                    <textarea name="message" id="" class="contact__control" cols="30" rows="10" placeholder="Message"></textarea>
+                    <textarea name="message" id="message" class="contact__control" cols="30" rows="10" placeholder="Message"></textarea>
                 </div>
-                <input type="submit" class="contact__submit" value="send">
+               </div>
+                <input type="submit" onclick="sendMessage();return false" id="sent" class="contact__submit" value="send">
             </form>
         </div>
 

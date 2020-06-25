@@ -230,11 +230,11 @@ button, button:hover, button:active {
     margin-right: 3rem; }
   .header__link {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #360909;
     text-decoration: none;
     letter-spacing: .1rem;
-    line-height: 1;
+    line-height: 1.6;
     color: white;
     text-align: center;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
@@ -432,3 +432,10 @@ button, button:hover, button:active {
     cursor: pointer; }
     .contact__submit:hover {
       background-color: #253845; }
+
+.contact__container {
+  transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  overflow: hidden; }
+
+.contact__container--folded {
+  height: 0px; }
