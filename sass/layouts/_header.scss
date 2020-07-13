@@ -1,11 +1,19 @@
 .header {
     width: 100%;
     background-color:$color-secondary;
+    background-image: linear-gradient(rgba($color-secondary, .4), rgba($color-secondary, 1)), url('/img/bg.jpeg');
+
+    background-size: contain;
+    background-position: center;
+
     display : grid;
     grid-template-rows: 8rem 1fr 20vh;
     color: white;
     min-height: 100vh;
-
+    @include respond(phone){
+        padding: 0;
+        background-image: linear-gradient(rgba($color-secondary, .8), rgba($color-secondary, 1)), url('/img/bg.jpeg');
+    }
     &__list {
         padding: 2rem;
         justify-self: end;
@@ -14,6 +22,10 @@
         grid-template-columns: repeat(2, max-content);
         grid-column-gap: 2rem;
         margin-right: 3rem;
+        @include respond(phone){
+            margin-right: 1rem;
+            grid-column-gap: .5rem;
+        }
     }
     &__list-item {}
     &__link {
@@ -38,13 +50,42 @@
         grid-template-columns: minmax(max-content, 90rem);
         grid-gap: 2rem;
         padding: 5rem;
+        & > h2 {
+            text-shadow: 0 0 5px rgba($color-black, .15);
+        }
+        @include respond(phone){
+            justify-items: center;
+            grid-template-columns: max-content;
+            padding: 1rem;
+        }
         h2{
             justify-self: start;
             padding-left: 2rem;
-            padding-right: 2rem; 
+            padding-right: 2rem;
+            
+            @include respond(land){
+                font-size: 10rem;
+            } 
+            @include respond(phone){
+                padding: 0;
+                font-size: 7rem;
+            }
         }
-        h3{justify-self: center;}
-        h4{justify-self: end;}
+        h3{
+            justify-self: center;
+            @include respond(phone){
+                justify-self: center;
+                font-size: 5rem;
+            }
+        }
+        h4{
+            justify-self: end;
+            text-shadow: 0 0 5px rgba($color-black, .1);
+            line-height: 1.6;
+            @include respond(phone){
+                justify-self: center;
+            }
+        }
     }
     &__btn {
         justify-self: center;
@@ -60,6 +101,8 @@
         cursor: pointer;
 
         padding: 1rem 5rem;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 
         transition:all .5s cubic-bezier(0.23, 1, 0.32, 1);
           &:hover {

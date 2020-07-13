@@ -3,6 +3,9 @@
   line-height: 1;
   font-family: "Open Sans", sans-serif;
   font-size: 12rem; }
+  @media (max-width: 37.5em) {
+    .heading-2 {
+      font-size: 6rem; } }
   .heading-2--bold {
     font-weight: 700; }
 
@@ -10,6 +13,12 @@
   line-height: 1;
   font-family: "Open Sans", sans-serif;
   font-size: 8.8rem; }
+  @media (max-width: 52.5em) {
+    .heading-3 {
+      font-size: 6.8rem; } }
+  @media (max-width: 52.5em) and (max-width: 37.5em) {
+    .heading-3 {
+      font-size: 5.8rem; } }
   .heading-3--light {
     font-weight: 300; }
 
@@ -17,6 +26,9 @@
   line-height: 1;
   font-family: "Open Sans", sans-serif;
   font-size: 3rem; }
+  @media (max-width: 52.5em) {
+    .heading-4 {
+      font-size: 2.5rem; } }
   .heading-4--light {
     font-weight: 300; }
 
@@ -53,7 +65,9 @@ body {
   grid-template-rows: repeat(4, max-content);
   grid-column: minmax(max-content, 1fr);
   grid-row-gap: 10rem;
-  background-color: #131d24; }
+  background-color: #131d24;
+  width: 100%;
+  position: relative; }
 
 button, button:hover, button:active {
   outline: none; }
@@ -123,6 +137,11 @@ button, button:hover, button:active {
   grid-template-rows: repeat(3, 2.5rem) 1fr;
   grid-template-columns: 2.5rem;
   grid-row-gap: 1.5rem; }
+  @media (max-width: 37.5em) {
+    .sm {
+      grid-template-rows: 2.5rem;
+      grid-template-columns: 1fr repeat(3, 2.5rem);
+      grid-column-gap: .8rem; } }
   .sm__icon {
     cursor: pointer; }
     .sm__icon svg {
@@ -136,6 +155,13 @@ button, button:hover, button:active {
     width: .1rem;
     height: 5rem;
     justify-self: center; }
+    @media (max-width: 37.5em) {
+      .sm__seperator {
+        height: .1rem;
+        width: 5rem;
+        align-self: center;
+        grid-column: 1/span 1;
+        grid-row: 1/span 1; } }
   .sm__seperator::after {
     content: '';
     display: block;
@@ -151,14 +177,23 @@ button, button:hover, button:active {
     z-index: 3333;
     bottom: 0;
     left: 5rem; }
+    @media (max-width: 37.5em) {
+      * > .sm {
+        top: 1.5rem;
+        left: 0; } }
 
 .repositories {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
   grid-gap: 2rem;
   padding: 2rem;
   justify-content: center; }
+  @media (max-width: 37.5em) {
+    .repositories {
+      column-gap: 0;
+      row-gap: 4rem;
+      padding: 4rem; } }
   .repositories__item {
     width: 100%;
     color: white;
@@ -216,10 +251,17 @@ button, button:hover, button:active {
 .header {
   width: 100%;
   background-color: #131d24;
+  background-image: linear-gradient(rgba(19, 29, 36, 0.4), #131d24), url("/img/bg.jpeg");
+  background-size: contain;
+  background-position: center;
   display: grid;
   grid-template-rows: 8rem 1fr 20vh;
   color: white;
   min-height: 100vh; }
+  @media (max-width: 37.5em) {
+    .header {
+      padding: 0;
+      background-image: linear-gradient(rgba(19, 29, 36, 0.8), #131d24), url("/img/bg.jpeg"); } }
   .header__list {
     padding: 2rem;
     justify-self: end;
@@ -228,6 +270,10 @@ button, button:hover, button:active {
     grid-template-columns: repeat(2, max-content);
     grid-column-gap: 2rem;
     margin-right: 3rem; }
+    @media (max-width: 37.5em) {
+      .header__list {
+        margin-right: 1rem;
+        grid-column-gap: .5rem; } }
   .header__link {
     position: relative;
     font-size: 1.3rem;
@@ -245,14 +291,37 @@ button, button:hover, button:active {
     grid-template-columns: minmax(max-content, 90rem);
     grid-gap: 2rem;
     padding: 5rem; }
+    .header__content > h2 {
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
+    @media (max-width: 37.5em) {
+      .header__content {
+        justify-items: center;
+        grid-template-columns: max-content;
+        padding: 1rem; } }
     .header__content h2 {
       justify-self: start;
       padding-left: 2rem;
       padding-right: 2rem; }
+      @media (max-width: 52.5em) {
+        .header__content h2 {
+          font-size: 10rem; } }
+      @media (max-width: 37.5em) {
+        .header__content h2 {
+          padding: 0;
+          font-size: 7rem; } }
     .header__content h3 {
       justify-self: center; }
+      @media (max-width: 37.5em) {
+        .header__content h3 {
+          justify-self: center;
+          font-size: 5rem; } }
     .header__content h4 {
-      justify-self: end; }
+      justify-self: end;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      line-height: 1.6; }
+      @media (max-width: 37.5em) {
+        .header__content h4 {
+          justify-self: center; } }
   .header__btn {
     justify-self: center;
     align-self: start;
@@ -265,6 +334,7 @@ button, button:hover, button:active {
     border: 1px solid #9ee493;
     cursor: pointer;
     padding: 1rem 5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
     .header__btn:hover {
       color: #253845;
@@ -298,6 +368,9 @@ button, button:hover, button:active {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media (max-width: 37.5em) {
+      .portfolio__projects {
+        padding: 0rem; } }
   .portfolio__item {
     width: 70%;
     overflow: hidden;
@@ -305,6 +378,12 @@ button, button:hover, button:active {
     padding: 5rem 0;
     grid-template-columns: minmax(max-content, 30%) 70%;
     position: relative; }
+    @media (max-width: 37.5em) {
+      .portfolio__item {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        padding: 2rem 0;
+        width: 90%; } }
   .portfolio__img {
     width: 100%;
     height: 40rem;
@@ -314,6 +393,11 @@ button, button:hover, button:active {
     background-size: cover;
     position: relative;
     transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+    @media (max-width: 37.5em) {
+      .portfolio__img {
+        grid-column: 1/-1;
+        grid-row: 1/span 1;
+        height: 20rem; } }
     .portfolio__img img {
       width: 100%;
       height: 100%;
@@ -333,6 +417,11 @@ button, button:hover, button:active {
     grid-gap: 1rem;
     justify-content: center;
     align-content: center; }
+    @media (max-width: 37.5em) {
+      .portfolio__content {
+        grid-column: 1/-1;
+        grid-row: 2/span 1;
+        height: 20rem; } }
     .portfolio__content h2 {
       color: white;
       text-align: center;
@@ -341,6 +430,9 @@ button, button:hover, button:active {
       font-size: 5rem;
       display: inline-block;
       grid-column: 1/-1; }
+      @media (max-width: 37.5em) {
+        .portfolio__content h2 {
+          font-size: 3rem; } }
     .portfolio__content p {
       color: white;
       text-align: center;
@@ -349,6 +441,9 @@ button, button:hover, button:active {
       font-size: 1.6rem;
       display: inline-block;
       grid-column: 1/-1; }
+      @media (max-width: 37.5em) {
+        .portfolio__content p {
+          font-size: 1.2rem; } }
     .portfolio__content button {
       grid-row: 4/span 1;
       font-family: "Open Sans", sans-serif;
@@ -360,15 +455,27 @@ button, button:hover, button:active {
       cursor: pointer; }
   .portfolio__item--right {
     grid-template-columns: 70% minmax(max-content, 30%); }
+    @media (max-width: 37.5em) {
+      .portfolio__item--right {
+        grid-template-columns: 1fr; } }
     .portfolio__item--right .portfolio__img {
       grid-column: 1/2; }
+      @media (max-width: 37.5em) {
+        .portfolio__item--right .portfolio__img {
+          grid-column: 1/2; } }
     .portfolio__item--right .portfolio__content {
       grid-column: 2/-1; }
+      @media (max-width: 37.5em) {
+        .portfolio__item--right .portfolio__content {
+          grid-column: 1/2; } }
 
 .contact {
   width: 100%;
   height: 10rem;
   padding: 0rem 10rem; }
+  @media (max-width: 37.5em) {
+    .contact {
+      padding: 0; } }
   .contact__content {
     width: 100%;
     border-top: 1px solid #253845;

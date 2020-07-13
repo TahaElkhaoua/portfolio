@@ -5,6 +5,12 @@
     font-family: $font-primary;
     font-size: 12rem;
 
+    // @include respond(land){
+    //     font-size: 10rem;
+    // }
+    @include respond(phone){
+        font-size: 6rem;
+    }
     &--bold{
         font-weight: 700;
     }
@@ -15,6 +21,12 @@
     font-family: $font-primary;
     font-size: 8.8rem;
 
+    @include respond(land){
+        font-size: 6.8rem;
+        @include respond(phone){
+            font-size: 5.8rem;
+        }
+    }
     &--light{
         font-weight: 300;
     }
@@ -25,6 +37,9 @@
     font-family: $font-primary;
     font-size: 3rem;
 
+    @include respond(land){
+        font-size: 2.5rem;
+    }
     &--light{
         font-weight: 300;
     }

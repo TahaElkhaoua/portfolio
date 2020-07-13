@@ -24,6 +24,8 @@ body {
 
     grid-row-gap: 10rem;
     background-color: $color-secondary;
+    width: 100%;
+    position: relative;
 }
 button, button:hover, button:active {
     outline: none;

@@ -1,3 +1,21 @@
 @mixin google($url){
     @import url('https://fonts.googleapis.com/css?family=#{unquote($url)}:300,400,600,700,800&display=swap');
 }
+
+@mixin respond($breakpoint) {
+
+    
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em){@content;}
+    }
+    @if $breakpoint == land {
+        @media (max-width: 52.5em){@content;}
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em){@content;}
+    }
+    @if $breakpoint == big-desktop {
+        @media (max-width: 112.5em){@content;}
+    }
+
+}
