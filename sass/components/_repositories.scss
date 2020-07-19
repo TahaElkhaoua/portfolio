@@ -11,7 +11,7 @@
     @include respond(phone){
         column-gap: 0;
         row-gap: 4rem;
-        padding: 4rem;
+        padding: 5rem;
     }
     &__item {
         width: 100%;

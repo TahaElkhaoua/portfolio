@@ -14,12 +14,22 @@
         display: grid;
         grid-template-columns: minmax(min-content, 1fr) 10% 30% 5%;
 
+
+        @include respond(phone){
+
+            grid-template-columns: 100%;
+            
+
+        }
     }
 
     &__about {
      
         padding: 2rem;
-
+        @include respond(phone){
+            grid-column: 1/span 1;
+            padding: 4rem;
+        }
         h2 {
             text-align: left;
             font-size: 2rem;
@@ -38,6 +48,9 @@
         display: grid;
         // grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
         grid-template-rows: repeat(4, 3rem);
+        @include respond(phone){
+            // padding: 3rem;
+        }
         &__group {
             display: flex;
             flex-direction: row;
@@ -54,6 +67,7 @@
 
                 font-size: 1.2rem;
                 margin-left: 1rem;
+
             }
         }
     }
@@ -61,6 +75,10 @@
     &__form {
         padding: 2rem 0;
         grid-column: 3/span 1;
+        @include respond(phone){
+            grid-column: 1/span 1;
+            padding: 5rem;
+        }
     }
     &__heading {
         text-align: center;

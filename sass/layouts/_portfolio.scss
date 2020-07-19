@@ -7,6 +7,10 @@
         margin-top: 1rem;
         text-align: center;
         color: white;
+        @include respond(phone){
+            // padding: 3rem;
+            margin-bottom: 5rem;
+        }
     }
     &__projects{
         padding: 5rem;
@@ -32,7 +36,7 @@
         @include respond(phone){
             grid-template-columns: 1fr;
             grid-template-rows: max-content max-content;
-            padding: 2rem 0;
+            padding: 0rem 0;
             width: 90%;
         }
     }
@@ -44,6 +48,7 @@
 
         background-image: url('../img/tarwell.png');
         background-size: cover;
+        // background-position: center;
         position: relative;
         transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         @include respond(phone){
@@ -59,7 +64,7 @@
             width: 100%;
             height: 100%;
             object-fit:cover;
-            object-position: left top;
+            object-position: center top;
         }
     }
     &__content {
