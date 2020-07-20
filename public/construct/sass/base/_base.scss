@@ -1,0 +1,51 @@
+
+::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lighten($color: $color--blue--secondary, $amount: 10); 
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: darken($color: $color--blue--secondary, $amount: 10); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $color--orangered; 
+  }
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond(tab-land){
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+ 
+    // background-color: $color--body--bg;
+    
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [content-start] repeat(8,[col-start] minmax(min-content, 14rem ) [col-end]) [content-end] minmax(6rem, 1fr) [full-end];
+}
+button {
+    outline: none;
+    cursor: pointer;
+}

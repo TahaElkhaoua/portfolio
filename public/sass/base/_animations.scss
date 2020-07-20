@@ -10,3 +10,16 @@
     }
 }
 
+@keyframes bgAnimate {
+    0% {
+        opacity: .7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+ 
+    100% {
+        opacity: .7;
+    }
+}

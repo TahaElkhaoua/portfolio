@@ -1,0 +1,16 @@
+.btn {
+
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    font-family: $font-primary;
+
+    &__orangered {
+        background-color: $color--orangered;
+        color: white;
+
+        padding: 1.1rem 3rem;
+    }
+  
+}

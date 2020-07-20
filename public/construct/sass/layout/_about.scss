@@ -1,0 +1,85 @@
+.about {
+
+    grid-column: content-start/full-end;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 56rem ) )  minmax(6rem, 1fr);
+    grid-template-rows: min-content;
+
+    padding-top: 5rem 0rem;
+
+    @include respond(phone){
+        grid-template-columns: 100%;
+    }
+
+    &__text {
+        grid-column: 1/span 1;
+        padding: 3vw 0;
+
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        row-gap: 3rem;
+    }
+    &__heading {
+        color: $color--black;
+        font-family: $font-secondary;
+
+        // width: 30rem;
+
+        text-transform: uppercase;
+
+        font-size: 6rem;
+        font-weight: 400;
+
+        line-height: 1;
+    }
+    &__paragraph {
+        display: block;
+        width: 90%;
+            padding-top: 1rem;
+            font-family: $font-primary;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: $color--black;
+            @include respond(phone){
+                font-size: 1.4rem;
+            }
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+    }
+    &__button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: $font-primary;
+        padding: 1rem;
+
+        color: $color--orangered;
+
+        outline: none;
+
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-right: 3rem;
+        @include respond(phone){
+            font-size: 1.4rem;
+        }
+    }
+
+    &__image {
+        grid-column: 2/-1;
+        height: 60vh;
+        overflow: hidden;
+        @include respond(phone){
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

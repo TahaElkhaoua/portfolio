@@ -1,0 +1,120 @@
+.services {
+    grid-column: full-start/full-end;
+    display: grid;
+    background-color:  $color--blue--secondary;
+
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    margin-top: 5rem;
+
+    &__heading {
+        grid-column: 1/span 2;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color--body--bg;
+
+        height: 18vw;
+        min-height: 15rem;
+
+        @include respond(phone){
+            grid-column: 1/span 1;        
+        }
+        h2 {
+            color: $color--black;
+            font-family: $font-secondary;
+
+            // width: 30rem;
+    
+            text-transform: uppercase;
+    
+            font-size: 6rem;
+            font-weight: 400;
+    
+            line-height: .5;
+        }
+    }
+    &__item {
+        height: 18vw;
+        min-height: 15rem;
+        
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 5rem;
+            height: 5rem;
+
+            fill : url(#advantages__gradient);
+            margin-bottom: 1.5rem;
+        }
+        p{
+            font-family: $font-primary;
+            font-size: 1.4rem;
+        }
+
+    }
+    &__item--white {
+        background-color: $color--body--bg;
+
+        svg {
+
+        }
+        p {
+            color: $color--blue--secondary; 
+        }
+    }
+    &__item--blue {
+
+        background-color: $color--blue--secondary;
+        svg {
+            fill: url(#gradient__white);
+        }
+        p {
+            color: white;
+        }
+    }
+    &__item--orangered {
+        background-color: $color--orangered;
+
+        svg {
+            fill: white;
+        }
+        p {
+            color: white;
+        }
+    }
+    &__item--empty {
+        background-color: $color--blue--secondary;
+        display: flex;
+        flex-direction: row;
+
+        span {
+            color: $color--body--bg;
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            padding-right: 1rem;
+        }
+        p {
+            color: $color--orangered;
+            text-transform: uppercase;
+
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+    }
+    &__item--image {
+        overflow: hidden;
+        img {
+            width: 100%;
+
+            object-fit: center;
+        }
+    }
+}

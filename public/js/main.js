@@ -1,6 +1,6 @@
 (function(win, doc){
 
-    win.sendMessage = function(){
+    win.sendMessage = async function(){
         //Style
         var submitBtn = doc.querySelector('#sent');
         var content = doc.querySelector('.contact__container');
@@ -15,19 +15,17 @@
         submitBtn.disabled = "true";
         //Functionality
 
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            this.responseText;
-            submitBtn.value = "Message Sent";
-          }else{
-            submitBtn.value = "Message not sent try again!!";
-          }
-        };
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.open("POST", "{SEND MESSAGE URL}", true);
-        xhttp.send("name="+name+"&email="+email+"&message="+message);
+        var data = new URLSearchParams();
 
+        data.append('name', name);
+        data.append('email', email);
+        data.append('message', message);
+
+      var res = await (await fetch('/sendMail', {
+        method: 'POST',
+        body: data
+      })).text(); 
+        submitBtn.value = res;
     }
     win.scrollToElement = function(element){
         var ele = doc.querySelector(element);

@@ -1,0 +1,65 @@
+.header {
+
+    grid-column: full-start/full-end;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: max-content;
+
+    max-width: 100%;
+
+    @include respond(phone) {
+        grid-template-columns: 100%;
+        position: relative;
+    }
+    &__img {
+        width: 100%;
+        height: 65vh;
+        object-fit: cover;
+        z-index: 20;
+        @include respond(phone){
+            position: absolute;
+        }
+    }
+    &__content {
+        background-color: $color--grey--light;
+        display: grid;
+        grid-template-columns: minmax(min-content, 50rem);
+        grid-template-rows: repeat(3, max-content);
+
+        padding: 0rem 10rem ;
+
+
+        justify-content: flex-start;
+        align-content: center;
+        z-index: 50;
+        
+        @include respond(phone){
+            background-color: rgba($color--body--bg, .5);
+            height: 50vh;
+        }
+    }
+    &__primary {
+        color: $color--black;
+        font-family: $font-secondary;
+
+        // width: 30rem;
+
+        text-transform: uppercase;
+
+        font-size: 6rem;
+        font-weight: 400;
+
+        padding-bottom: 1rem;
+
+        line-height: 1;
+    }
+    &__text {
+        // width: 30rem;
+
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        padding-bottom: 4rem;
+    }
+    &__button {}
+}
