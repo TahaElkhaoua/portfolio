@@ -81,7 +81,7 @@
 
         display: grid;
         grid-template-rows: repeat(2, max-content) 1fr max-content;
-        grid-template-columns: repeat(2, max-content);
+        grid-template-columns: repeat(1, max-content);
 
         grid-gap: 1rem;
 
@@ -133,6 +133,10 @@
 
             color: $color-primary;
             border: 1px solid $color-primary;
+
+            width: 15rem;
+
+            justify-self: center;
 
             cursor: pointer;
 

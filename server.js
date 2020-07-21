@@ -3,12 +3,13 @@ const app = express();
 const path = require('path');
 
 const port = process.env.PORT || 5000;
+const compression = require('compression');
 
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-
+app.use(compression());
 
 
 
@@ -32,8 +33,8 @@ app.post('/sendMail', async (req, res)=>{
     
     };
     transporter.sendMail(mailOptions, (err, info)=>{
-        if(err)
-            return res.send('Message not sent please try again!!');
+        // if(err)
+        //     return res.send('Message not sent please try again!!');
     
         res.send('Message Sent');
     });

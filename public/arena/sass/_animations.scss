@@ -1,0 +1,39 @@
+@keyframes fall-down {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes pexelate {
+    0% {
+      filter: blur(3px);
+    }
+    
+    100% {
+      filter: blur(0px);
+
+    }
+  }
+
+  @keyframes unpexelate {
+    0% {
+      filter: blur(0px);
+    }
+    
+    100% {
+      filter: blur(5px);
+    }
+  }
+
+  @keyframes contact-animate {
+      0% {
+          transform: translateX(-97%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+  }

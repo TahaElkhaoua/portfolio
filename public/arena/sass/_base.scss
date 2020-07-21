@@ -1,0 +1,109 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-primary;
+    padding: 2rem 15rem 0rem;
+
+    overflow-x: hidden;
+}
+button {
+    outline: none;
+}
+
+.services {
+
+    padding : 15rem 10rem;
+    display: flex;
+    font-family: $font-secondary;
+    flex-direction: row;
+
+    &__text {
+        width: 100%;
+
+        p{
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: $color--black--primary;
+
+            font-weight: 200;
+
+            width: 64%;
+
+            font-family: $font-secondary;
+        }
+    }
+    &__buttons {
+        margin-top: 5rem;
+        button {
+            cursor: pointer;
+            font-family: $font-primary;
+            font-weight: 600;
+            width: 12.5rem;
+            padding: 1rem 1.5rem;
+            margin-right: 1rem;
+            color: $color--blue--dark;
+            background: none;
+            border: none;
+        }
+        #aquisition {
+            border: 2px solid $color--blue--dark;
+        }
+        #managemenet {
+            background: #f5f6f7;
+        }
+    }
+    &__heading {
+        color: $color--black--secondary;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+
+        font-family: $font-secondary;
+    }
+    &__img {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        flex: 1 1 auto;
+    }
+    &__interior {
+        width: 100%; 
+        height: 35rem;
+        z-index: 100;
+        img {
+            height: 35rem;
+            width: 95%;
+            object-fit: cover;
+            z-index: 100;
+        }
+    }
+    &__seperator {
+        position: absolute;
+
+        width: 1.5px;
+        height: 30%;
+
+        top: -5rem;
+        right: 20%;
+
+        background-color: #00a2ff;
+    }
+    &__box {
+        z-index: -1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 30%;
+        height: 70%;
+
+        background-color: #00a2ff;
+    }
+}
